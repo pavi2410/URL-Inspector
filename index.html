@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>URL Inspector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#eceff1">
+    <style>
+      body {
+        margin: 0;
+        padding: 8px;
+        font-family: Verdana;
+      }
+      
+      input {
+        border: 0;
+        outline: none;
+        box-sizing: border-box;
+        font-size: 2em;
+        width: 100%;
+        height: 2em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        background-color: #eceff1;
+        color: #2196f3;
+        border-radius: 4px;
+      }
+      
+      table {
+        margin-top: 8px;
+        width: 100%;
+        table-layout: fixed;
+        text-align: left;
+        border-collapse: collapse;
+        border-radius: 4px;
+        overflow-x:none;
+      }
+      
+      table thead {
+        background: #2196f3;
+        display: none;
+      }
+      
+      table thead th {
+        font-weight: bold;
+        color: #FFFFFF;
+        text-align: left;
+      }
+      
+      table td, table th {
+        padding: 1em;
+      }
+      
+      table tr:nth-child(even) {
+        background: #bbdefb;
+      }
+      
+      table td:nth-child(1), table th:nth-child(1) {
+        width: 25%;
+      }
+      
+      table td:nth-child(2), table th:nth-child(2) {
+        min-width: 75%;
+        word-wrap: break-word;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="url" placeholder="Type a URL" autofocus="autofocus" autocomplete="off"/>
+    <table>
+      <thead>
+        <th>Property</th>
+        <th>Value</th>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script>
+      let $url = document.querySelector("input");
+      
+      $url.addEventListener("keydown", e => {
+        if (e.key === "Enter") {
+          update(e.target.value);
+        }
+      });
+      
+      function update(value) {
+        const props = [
+          "hash",
+          "host",
+          "hostname",
+          "href",
+          "origin",
+          "password",
+          "pathname",
+          "port",
+          "protocol",
+          "search",
+          "username"
+        ];
+      
+        let $thead = document.querySelector("table thead"),
+            $tbody = document.querySelector("table tbody");
+      
+        if ($thead.computedStyleMap().get("display").value === "none") {
+          $thead.attributeStyleMap.set("display", "table-header-group");
+        }
+        $tbody.innerHTML = "";
+      
+        const url = new URL(value);
+      
+        for (const key of props) {
+          const value = url[key];
+          if (!value) continue;
+          let $el = createTableRow(key, value);
+          $tbody.append($el);
+        }
+      }
+      
+      function createTableRow(key, value) {
+        let $tr = document.createElement("tr"),
+            $key = document.createElement("td"),
+            $value = document.createElement("td");
+      
+        $key.innerText = key;
+        $value.innerText = value;
+      
+        $tr.append($key);
+        $tr.append($value);
+      
+        return $tr;
+      }
+    </script>
+  </body>
+</html>
