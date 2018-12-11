@@ -91,20 +91,6 @@
       })
       
       function update(value) {
-        const props = [
-          'hash',
-          'host',
-          'hostname',
-          'href',
-          'origin',
-          'password',
-          'pathname',
-          'port',
-          'protocol',
-          'search',
-          'username'
-        ]
-      
         let $thead = document.querySelector('table thead'),
             $tbody = document.querySelector('table tbody')
       
@@ -113,28 +99,21 @@
         }
         $tbody.innerHTML = ''
       
+        const props = ['hash', 'host', 'hostname', 'href', 'origin', 'password', 'pathname', 'port', 'protocol', 'search', 'username']
         const url = new URL(value)
-      
-        for (const key of props) {
-          const value = url[key]
-          if (!value) continue
-          let $el = createTableRow(key, value)
-          $tbody.append($el)
-        }
+        
+        props.map(prop => [prop, url[prop]])
+          .filter(x => x)
+          .forEach(prop => insertTableRow($tbody, ...prop))
       }
       
-      function createTableRow(key, value) {
-        let $tr = document.createElement('tr'),
-            $key = document.createElement('td'),
-            $value = document.createElement('td')
-      
-        $key.textContent = key
-        $value.textContent = value
-      
-        $tr.append($key)
-        $tr.append($value)
-      
-        return $tr
+      function insertTableRow(table, key, value) {
+        let row = table.insertRow(-1),
+            cell1 = row.insertCell(0),
+            cell2 = row.insertCell(1)
+        
+        cell1.textContent = key
+        cell2.textContent = value
       }
     </script>
   </body>
