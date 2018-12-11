@@ -43,7 +43,7 @@
       
       table thead th {
         font-weight: bold;
-        color: #FFFFFF;
+        color: white;
         text-align: left;
       }
       
@@ -99,11 +99,11 @@
         }
         $tbody.innerHTML = ''
       
-        const props = ['hash', 'host', 'hostname', 'href', 'origin', 'password', 'pathname', 'port', 'protocol', 'search', 'username']
+        const keys = ['hash', 'host', 'hostname', 'href', 'origin', 'password', 'pathname', 'port', 'protocol', 'search', 'username']
         const url = new URL(value)
         
         props.map(prop => [prop, url[prop]])
-          .filter(x => x)
+          .filter(x => x[1])
           .forEach(prop => insertTableRow($tbody, ...prop))
       }
       
