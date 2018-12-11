@@ -102,9 +102,9 @@
         const keys = ['hash', 'host', 'hostname', 'href', 'origin', 'password', 'pathname', 'port', 'protocol', 'search', 'username']
         const url = new URL(value)
         
-        props.map(prop => [prop, url[prop]])
+        keys.map(key => [key, url[key]])
           .filter(x => x[1])
-          .forEach(prop => insertTableRow($tbody, ...prop))
+          .forEach(i => insertTableRow($tbody, ...i))
       }
       
       function insertTableRow(table, key, value) {
