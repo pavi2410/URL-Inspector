@@ -1,7 +1,5 @@
 const $url = document.querySelector('input')
 
-const urlParams = new URLSearchParams(window.location.search)
-
 if (location.hash) {
     update(location.hash)
 }
