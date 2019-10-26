@@ -1,4 +1,4 @@
-# URL-Inspector
+# URL Inspector
 Inspect parts of a URL
 
 ## Usage
