@@ -2,9 +2,8 @@ const $url = document.querySelector('input')
 
 const urlParams = new URLSearchParams(window.location.search)
 
-if (urlParams.has('url')) {
-    $url.value = urlParams.get('url')
-    update($url.value)
+if (location.hash) {
+    update(location.hash)
 }
 
 $url.addEventListener('keydown', e => {

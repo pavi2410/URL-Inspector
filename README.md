@@ -2,7 +2,7 @@
 Inspect parts of a URL
 
 ## Usage
-Pass an optional `url` query paramater to inspect.
+Pass a URL after `#` to inspect.
 ```
-https://pavi2410.tk/URL-Inspector/?url=https://www.example.com
+https://pavi2410.tk/URL-Inspector/#https://www.example.com
 ```
