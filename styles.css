@@ -1,6 +1,6 @@
 body {
-    margin: 0;
-    padding: 8px;
+    margin: auto;
+    padding: 1.5em;
     font-family: Verdana;
 }
 
@@ -19,7 +19,7 @@ input {
 }
 
 table {
-    margin-top: 8px;
+    margin-top: 1.5em;
     width: 100%;
     table-layout: fixed;
     text-align: left;
