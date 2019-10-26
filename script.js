@@ -1,7 +1,9 @@
 const $url = document.querySelector('input')
 
 if (location.hash) {
-    update(location.hash.slice(1)) // remove # at the start
+    const url = location.hash.slice(1) // remove # at the start
+    $url.value = url
+    update(url)
 }
 
 $url.addEventListener('keydown', e => {
