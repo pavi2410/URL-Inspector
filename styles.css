@@ -1,7 +1,7 @@
 body {
     margin: auto;
     padding: 1.5em;
-    font-family: Verdana;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
 }
 
 input {
