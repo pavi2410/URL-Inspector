@@ -4,6 +4,32 @@ body {
     font-family: Verdana;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+header a {
+    margin: 0 10px;
+    height: 2.7em;
+    text-align: center;
+    line-height: 2.7em;
+    
+    font-family: monospace;
+    font-size: 2.2em;
+    font-weight: bold;
+    text-decoration: none;
+    
+    color: #2196f3;
+    transition: 0.5s;
+}
+
+header a:hover {
+    font-size: 2.5em;
+    color: rgb(83, 83, 83);
+}
+
 input {
     border: 0;
     outline: none;
@@ -57,4 +83,14 @@ table td:nth-child(2),
 table th:nth-child(2) {
     min-width: 75%;
     word-wrap: break-word;
+}
+
+@media (max-width:500px) {
+    header {
+        flex-direction: column;
+    }
+
+    header a, header a:hover {
+        font-size: calc(0.5em + 5vw);
+    }
 }
