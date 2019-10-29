@@ -10,7 +10,7 @@ header {
     margin-bottom: 35px;
 }
 
-header a, header  h2 {
+header a {
     margin: 0 10px;
     height: 2.7em;
     text-align: center;
@@ -25,20 +25,10 @@ header a, header  h2 {
     transition: 0.5s;
 }
 
-header h2 {
-    font-size: 2.5em;
-    color: rgb(124,124,124);
-}
-
 header a:hover {
     font-size: 2.5em;
     color: rgb(83, 83, 83);
 }
-
-header h2:hover {
-    font-size: 2.7em;
-}
-
 
 input {
     border: 0;
@@ -102,9 +92,5 @@ table th:nth-child(2) {
 
     header a, header a:hover {
         font-size: calc(0.5em + 5vw);
-    }
-
-    header h2, header h2:hover {
-        font-size: calc(0.8em + 5vw);
     }
 }
