@@ -16,7 +16,7 @@ function update(value) {
     const $thead = document.querySelector('table thead'),
         $tbody = document.querySelector('table tbody')
 
-    if ($thead.display === 'none') {
+    if (!$thead.display) {
         $thead.display = 'table-header-group'
     }
 
