@@ -16,8 +16,8 @@ function update(value) {
     const $thead = document.querySelector('table thead'),
         $tbody = document.querySelector('table tbody')
 
-    if ($thead.computedStyleMap().get('display').value === 'none') {
-        $thead.attributeStyleMap.set('display', 'table-header-group')
+    if ($thead.display === 'none') {
+        $thead.display = 'table-header-group'
     }
 
     $tbody.innerHTML = ''
