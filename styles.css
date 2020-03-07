@@ -56,31 +56,28 @@ table {
 }
 
 table thead {
-    background: #2196f3;
+    background-color: #2196f3;
 }
 
-table thead th {
+table th {
     font-weight: bold;
     color: white;
     text-align: left;
 }
 
-table td,
-table th {
+table td, table th {
     padding: 1em;
 }
 
 table tr:nth-child(even) {
-    background: #bbdefb;
+    background-color: #bbdefb;
 }
 
-table td:nth-child(1),
-table th:nth-child(1) {
+table td:nth-child(1), table th:nth-child(1) {
     width: 25%;
 }
 
-table td:nth-child(2),
-table th:nth-child(2) {
+table td:nth-child(2), table th:nth-child(2) {
     min-width: 75%;
     word-wrap: break-word;
 }
@@ -113,7 +110,19 @@ table th:nth-child(2) {
         background-color: rgba(33, 150, 243, 0.25);
     }
     table thead {
-        background: rgba(33, 150, 243, 0.25);
+        background-color: rgba(33, 150, 243, 0.25);
+    }
+    table th {
+        color: rgba(33, 150, 243);
+    }
+    table td {
+        color: rgba(33, 150, 243, 0.5);
+    }
+    table tr:nth-child(odd) {
+        background-color: rgba(33, 150, 243, 0.1);
+    }
+    table tr:nth-child(even) {
+        background-color: rgba(33, 150, 243, 0.15);
     }
     .corner-bg {
         fill: white;
