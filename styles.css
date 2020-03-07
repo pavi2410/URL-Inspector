@@ -56,6 +56,7 @@ table {
 }
 
 table thead {
+    display: none;
     background-color: #2196f3;
 }
 
