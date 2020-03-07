@@ -103,3 +103,22 @@ table th:nth-child(2) {
     height: 120px;
     width: 120px;
 }
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+    }
+    input {
+        color: rgba(33, 150, 243);
+        background-color: rgba(33, 150, 243, 0.25);
+    }
+    table thead {
+        background: rgba(33, 150, 243, 0.25);
+    }
+    .corner-bg {
+        fill: white;
+    }
+    .octo-arm, .octo-body {
+        fill: black;
+    }
+}
