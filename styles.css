@@ -94,3 +94,12 @@ table th:nth-child(2) {
         font-size: calc(0.5em + 5vw);
     }
 }
+
+.github-corner svg {
+    transition: 0.5s;
+}
+
+.github-corner svg:hover {
+    height: 120px;
+    width: 120px;
+}
