@@ -44,6 +44,7 @@ function update(value) {
     };
 
     const $content = document.getElementById('content');
+    $content.innerHTML = '';
     createTable($content, content)
 }
 
