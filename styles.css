@@ -15,12 +15,12 @@ header a {
     height: 2.7em;
     text-align: center;
     line-height: 2.7em;
-    
+
     font-family: monospace;
     font-size: 2.2em;
     font-weight: bold;
     text-decoration: none;
-    
+
     color: #2196f3;
     transition: 0.5s;
 }
@@ -45,8 +45,11 @@ input {
     font-family: inherit;
 }
 
-table {
+#content {
     margin-top: 1.5em;
+}
+
+table {
     width: 100%;
     table-layout: fixed;
     text-align: left;
@@ -56,17 +59,15 @@ table {
 }
 
 table thead {
-    display: none;
     background-color: #2196f3;
 }
 
-table th {
+table thead td {
     font-weight: bold;
-    color: white;
     text-align: left;
 }
 
-table td, table th {
+table td {
     padding: 1em;
 }
 
@@ -74,16 +75,16 @@ table tr:nth-child(even) {
     background-color: #bbdefb;
 }
 
-table td:nth-child(1), table th:nth-child(1) {
+table td:nth-child(1) {
     width: 25%;
 }
 
-table td:nth-child(2), table th:nth-child(2) {
+table td:nth-child(2) {
     min-width: 75%;
     word-wrap: break-word;
 }
 
-@media (max-width:500px) {
+@media (max-width: 500px) {
     header {
         flex-direction: column;
     }
@@ -106,28 +107,48 @@ table td:nth-child(2), table th:nth-child(2) {
     body {
         background-color: black;
     }
+
     input {
         color: rgba(33, 150, 243);
         background-color: rgba(33, 150, 243, 0.25);
     }
+
     table thead {
         background-color: rgba(33, 150, 243, 0.25);
     }
-    table th {
-        color: rgba(33, 150, 243);
+
+    table thead td {
+        color: rgb(33, 150, 243);
     }
+
     table td {
         color: rgba(33, 150, 243, 0.5);
     }
-    table tr:nth-child(odd) {
+
+    table tbody tr:nth-child(odd) {
         background-color: rgba(33, 150, 243, 0.1);
     }
-    table tr:nth-child(even) {
+
+    table tbody tr:nth-child(even) {
         background-color: rgba(33, 150, 243, 0.15);
     }
+
+    table table thead {
+        background-color: #08263d;
+    }
+
+    table table tbody tr:nth-child(odd) {
+        background-color: rgba(3, 15, 25, 0.25);
+    }
+
+    table table tbody tr:nth-child(even) {
+        background-color: #030f19;
+    }
+
     .corner-bg {
         fill: white;
     }
+
     .octo-arm, .octo-body {
         fill: black;
     }
