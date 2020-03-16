@@ -29,13 +29,17 @@ function update(value) {
 
     const props = keys.reduce((o, k) => url[k] ? {...o, [k]: url[k]} : o, {});
 
-    props.search = {
+    const search = {
         head: ["Key", "Value"],
         body: {}
     };
 
-    url.searchParams.forEach((v, k) => props.search.body[k] = v);
+    url.searchParams.forEach((v, k) => search.body[k] = v);
 
+    if (JSON.stringify(search.body) !== '{}') {
+        props.search = search;
+    }
+    
     const content = {
         head: ["Property", "Value"],
         body: props
