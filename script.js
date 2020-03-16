@@ -12,8 +12,6 @@ $url.addEventListener('keydown', e => {
     }
 });
 
-update('https://www.linkedin.com/profile/add?_ed=0_7nTFLiuDkkQkdELSpruCwEuTkWJfK6qwI5_R_HkXH83fsKpEu6o0sxZ2vc67kM8haSgvthvZk7wTBMS3S-m0L6A6mLjErM6PJiwMkk6nYZylU7__75hCVwJdOTZCAkdv&pfCertificationName=Certificate%20of%20Completion:%20C%2b%2b%20Course&pfCertificationUrl=https://www.sololearn.com/Profile/675658/&pfLicenseNo=1051-675658&pfCertStartDate=201808&trk=onsite_html');
-
 function update(value) {
     const url = new URL(value);
 
