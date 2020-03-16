@@ -80,6 +80,7 @@ table tr:nth-child(even) {
 
 table td:nth-child(1) {
     width: 25%;
+    overflow-wrap: break-word;
 }
 
 table td:nth-child(2) {
