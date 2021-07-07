@@ -10,6 +10,20 @@ header {
     margin-bottom: 35px;
 }
 
+footer {
+    position: absolute;
+	bottom: 0;
+	width: 95%;
+	height: 2.7em;
+    background-color: #125387;
+	color: #ffffff;
+	margin-top: 35px;
+	text-align: center;
+	
+	
+}
+
+
 header a {
     margin: 0 10px;
     height: 2.7em;
@@ -85,13 +99,18 @@ table td:nth-child(1) {
 
 table td:nth-child(2) {
     min-width: 75%;
-    word-wrap: break-word;
+    word-wrap: break-word;https://github.com/pavi2410/URL-Inspector
 }
 
 @media (max-width: 500px) {
     header {
         flex-direction: column;
     }
+	
+    footer {
+        flex-direction: column;
+    }
+
 
     header a, header a:hover {
         font-size: calc(0.5em + 5vw);
