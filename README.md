@@ -4,4 +4,5 @@ Inspect parts of a URL
 ## Usage
 Pass a URL after `#` to inspect.
 
-https://pavi2410.tk/URL-Inspector/#https://www.example.com?foo=bar
+## Test
+https://url-inspector.pavi2410.me/#https://www.example.com?foo=bar
